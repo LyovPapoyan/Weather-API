@@ -1,0 +1,40 @@
+<div class="container1">
+
+  <div class="search">
+    
+    <h2>Search Cities</h2>
+    <div class="flex">
+      <input class="form-control" type="text" placeholder="Search City" [(ngModel)]="city">
+
+      <div class="circle" (click)="search(city)">
+        <i class="material-icons" style="color: white">
+          search
+        </i>
+      </div>
+    </div>
+
+    <div class="toggle" *ngIf="toggle">
+      <div class="card" *ngFor="let city of addCity">
+        <span class="city">{{city.city}}</span>
+        <img src="{{city.img}}" class="pic">
+        <span class="degree">{{city.now_degree}}<sup>o</sup></span>
+        <span class="desc">{{city.description}}</span>
+        <div class="min-max">
+          <span class="min">{{city.min}}<sup>
+              <i class="material-icons" style="color:lightseagreen">arrow_downward</i></sup>
+            <sub style="font-size: 10px; color: lightseagreen">min</sub>
+          </span>
+          <span class="max">{{city.max}}<sup>
+              <i class="material-icons" style="color: red">arrow_upward</i></sup>
+            <sub style="font-size: 10px; color: red">max</sub>
+          </span>
+        </div>
+      </div>
+      <button (click)="add()">Add City +</button>
+    </div>
+
+  </div>
+
+  <div class="picture">
+    <img src="../../assets/Vatican-city-Sepac.jpg" class="pic2">
+  </div>

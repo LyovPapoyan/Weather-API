@@ -1,0 +1,32 @@
+<div class="container-fluid">
+
+  <div class="toggle" *ngIf="toggle">
+  <div class="card" *ngFor="let weat of weather">
+
+    <span class="city">{{weat.city}}</span>
+    <img src="{{weat.img}}" class="pic">
+    <span class="degree">{{weat.now_degree}}<sup>o</sup></span>
+    <span class="desc">{{weat.description}}</span>
+    <div class="min-max">
+      <span class="min">{{weat.min}}<sup>
+        <i class="material-icons" style="color:lightseagreen">arrow_downward</i></sup>
+        <sub style="font-size: 13px; color: lightseagreen">min</sub>
+      </span>
+      <span class="max">{{weat.max}}<sup>
+        <i class="material-icons" style="color: red">arrow_upward</i></sup>
+        <sub style="font-size: 13px; color: red">max</sub>
+      </span>
+
+    </div>
+
+  </div>
+</div>
+
+  <div class="add-card">
+    <div class="txt"> <span class="text">ADD CITY</span></div>
+    <div class="circle" (click)="redirect()">+</div>
+    <img src="../../assets/hot.jpg">
+  </div>
+
+
+</div>
