@@ -31,8 +31,10 @@
 }
 
 .toggle {
-    width: 250px;
+   width: 900px;
     height: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .circle {

@@ -14,17 +14,17 @@
     </div>
 
     <div class="toggle" *ngIf="toggle">
-      <div class="card" *ngFor="let city of addCity">
-        <span class="city">{{city.city}}</span>
-        <img src="{{city.img}}" class="pic">
-        <span class="degree">{{city.now_degree}}<sup>o</sup></span>
-        <span class="desc">{{city.description}}</span>
+      <div class="card" *ngFor="let item of addCity">
+        <span class="city">{{item.city}}</span>
+        <img src="{{item.img}}" class="pic">
+        <span class="degree">{{item.now_degree}}<sup>o</sup></span>
+        <span class="desc">{{item.description}}</span>
         <div class="min-max">
-          <span class="min">{{city.min}}<sup>
+          <span class="min">{{item.min}}<sup>
               <i class="material-icons" style="color:lightseagreen">arrow_downward</i></sup>
             <sub style="font-size: 10px; color: lightseagreen">min</sub>
           </span>
-          <span class="max">{{city.max}}<sup>
+          <span class="max">{{item.max}}<sup>
               <i class="material-icons" style="color: red">arrow_upward</i></sup>
             <sub style="font-size: 10px; color: red">max</sub>
           </span>

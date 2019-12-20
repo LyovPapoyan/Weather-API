@@ -64,18 +64,10 @@ search (city: string) {
 
 add () {
 
-  let city: Weat_data = {
-    city: this.addCity[0].city,
-    now_degree: this.addCity[0].now_degree,
-    description: this.addCity[0].description,
-    min: this.addCity[0].min,
-    max: this.addCity[0].max,
-    img: this.addCity[0].img
-  }
-
-  localStorage.setItem('info', JSON.stringify(city));
+  this.httpService.post(this.addCity).subscribe(data => {
+    
+  })
  
-
   this.router.navigate(['/home'])
 }
   
