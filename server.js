@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-const fs = require('fs')
+const fs = require('fs');
 
 const cors = require('cors');
 
@@ -15,9 +15,8 @@ app.use(bodyParser.json());
 app.get('/', function(req,res){
     if (!req.body) return res.sendStatus(400);
     let read = fs.readFileSync('./base.json', 'utf8');
-    //console.log((read));
     res.json(read)
-})
+});
 
 app.post('/', function (req, res) {
   if (!req.body) return res.sendStatus(400);

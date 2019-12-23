@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       }
        
      })
-  }, 100); 
+  }, 200); 
   }
 
   redirect() {
